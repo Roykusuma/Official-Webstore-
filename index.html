@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Profil Usaha Buku</title>
+    <link rel="stylesheet" href="style.css" />
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html" class="btn-kembali">Home</a></li>
+        <li><a href="produk.html"class="btn-kembali">Produk</a></li>
+        <li><a href="Bedah Buku Artikel.html"class="btn-kembali">Bedah Buku Artikel</a></li>
+        <li><a href="Testimoni.html"class="btn-kembali">Testimoni</a></li>    
+        <li><a href="Tampil Testimoni.html"class="btn-kembali">Tampil Testimoni</a></li>
+    </ul>
+</nav>
+</head>
+
+ <section class="daftar-produk">
+  <div class="produk">
+  <img src="Images/Naratif Store.png">
+  
+<div class="container">
+  <div class="stat-card">
+    <span class="counter" data-target="150">0</span>
+    <span class="label">Pengunjung Puas</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="85">0</span>
+    <span class="label">Data Pengunjung</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="1200">0</span>
+    <span class="label">Buku Favorit</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="50">0</span>
+    <span class="label">Pengunjung Terbaik</span>
+  </div>
+
+  <div class="stat-card">
+    <span class="counter" data-target="99">0</span>
+    <span class="label">Rating Positif</span>
+  </div>
+</div>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      
+      // Mengatur durasi animasi agar halus
+      const speed = 150; 
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 15);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  });
+</script>
+
+<body>
+    <h1>Selamat Datang di Naratif Store</h1>
+    <p>Website ini berisi informasi tentang produk buku, bedah buku, dan testimoni pelanggan.</p>
+    <p>Berikut adalah jenis-jenis buku yang biasa Anda temukan di Naratif Store:
+    
+    <h2>Motto Usaha Buku</h2>
+        <P>Sumber Ilmu, Inspirasi Tanpa Batas</P>
+        
+        <h3>Mengenal Ukuran Buku </h3>
+        <p>Ukuran buku sengaja dibuat beragam agar sesuai dengan genggaman pembacanya dan praktis dibawa, serta mudah tertata rapi di rak buku</p>
+        
+        <h3>Jenis Jenis Buku </h3>
+        <p>Beragam jenis buku yang tersedia pada bisnis kami, seperti Novel, komik/manga, psikolog, dongeng, buku sekolah, buku tentang incvestasi, resep makanan, serta kamus.</p>
+        
+        <h3>Tips Merawat Buku </h3>
+        <p>Buku sebaiknya disimpan dalam posisi tegak berdiri di rak yang kering dan terhindar dari paparan sinar matahari langsung, serta jauhkan dari tempat yang lembab. Sampul plastik adalah upaya perlindungan ekstra agar buku terjaga dari debu yang menempel.</p>
+        
+        <h3>Informai mencari buku terbaik</h3>
+        <p>Anda dapat memilih buku yang Anda minat dengan melilih kategori buku yang sesuai dengan yang Anda inginkan</p>
+        
+        <h3>Lokasi Toko Kami</h3>
+        <P>Anda bisa mengunjungi toko kami di Jl Kenongosari blok G no 12, Legokasri, Sidoarjo, Jawa Timur</P>
+        
+        <h3>Kontak Admin Toko</h3>
+        <p>Untuk informasi lebih lanjut, Anda dapat menghubungi kontak kami untuk melayani pembeli atau order secara online, kontak kami: <strong>+62823-3515-2779</strong> 
+</body>
+</html>
